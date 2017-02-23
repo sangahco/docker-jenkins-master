@@ -2,7 +2,7 @@ version: "2"
 
 services:
   jenkins:
-    image: jenkins:alpine
+    image: ${REGISTRY_URL}/jenkins-svntunnel
     ports:
     - ${JENKINS_REMOTE_API_PORT}:50000
     - ${JENKINS_HTTP_PORT}:8080
