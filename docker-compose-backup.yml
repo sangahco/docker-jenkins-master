@@ -6,4 +6,4 @@ services:
     volumes: 
     - ${JENKINS_HOME}:/jenkins_home
     - ${JENKINS_BACKUP_HOME}:/backup
-    command: ["tar", "-cvf", "/backup/jenkins-home.tar", "/jenkins_home"]
+    command: ["tar", "--exclude=workspace", "-cvf", "/backup/jenkins-home.tar", "/jenkins_home"]
