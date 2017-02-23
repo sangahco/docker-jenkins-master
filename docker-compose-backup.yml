@@ -1,0 +1,9 @@
+version: "2"
+
+services: 
+  jenkins-backup:
+    image: openjdk:8-jdk-alpine
+    volumes: 
+    - ${JENKINS_HOME}:/jenkins_home
+    - ${JENKINS_BACKUP_HOME}:/backup
+    command: ["tar", "-cvf", "/backup/jenkins-home.tar", "/jenkins_home"]
