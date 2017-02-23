@@ -8,6 +8,7 @@ services:
     - ${JENKINS_HTTP_PORT}:8080
     volumes: 
     - ${JENKINS_HOME}:/var/jenkins_home
+    restart: "unless-stopped"
     environment:
     - AWS_ACCESS_KEY_ID
     - AWS_SECRET_ACCESS_KEY
