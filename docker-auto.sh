@@ -52,7 +52,7 @@ case $i in
         CONF_ARG="-f docker-compose-dev.yml"
         shift
         ;;
-    --dev)
+    --backup)
         CONF_ARG="-f docker-compose.yml -f docker-compose-backup.yml"
         shift
         ;;
