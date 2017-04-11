@@ -16,6 +16,7 @@ services:
       hub_net:
         aliases:
         - builder
+    restart: "unless-stopped"
 
 networks: 
   hub_net:
