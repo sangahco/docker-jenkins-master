@@ -26,6 +26,7 @@ echo "  --backup        Backup Jenkins Workspace"
 echo
 echo "Options:"
 echo "  --help          Show this help message"
+echo "  --with-hub      Add connection tls/ssl, hub required"
 echo
 echo "Commands:"
 echo "  up              Start the services"
@@ -54,6 +55,10 @@ case $i in
         ;;
     --backup)
         CONF_ARG="-f docker-compose.yml -f docker-compose-backup.yml"
+        shift
+        ;;
+    --with-hub)
+        CONF_ARG="$CONF_ARG -f docker-compose-with-hub.yml"
         shift
         ;;
     --help|-h)
