@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  
+  jenkins:
+    networks: 
+      default:
+      hub_net:
+        aliases:
+        - builder
+
+networks: 
+  hub_net:
+    external: true
