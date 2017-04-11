@@ -22,11 +22,11 @@ echo
 echo "Mode:"
 echo "  --prod          Production mode"
 echo "  --dev           Development mode"
-echo "  --backup        Backup Jenkins Workspace"
+echo "  --with-hub      Add connection tls/ssl, hub required"
 echo
 echo "Options:"
 echo "  --help          Show this help message"
-echo "  --with-hub      Add connection tls/ssl, hub required"
+echo "  --backup        Backup Jenkins Workspace"
 echo
 echo "Commands:"
 echo "  up              Start the services"
@@ -53,12 +53,12 @@ case $i in
         CONF_ARG="-f docker-compose-dev.yml"
         shift
         ;;
-    --backup)
-        CONF_ARG="-f docker-compose.yml -f docker-compose-backup.yml"
+    --with-hub)
+        CONF_ARG="-f docker-compose-with-hub.yml"
         shift
         ;;
-    --with-hub)
-        CONF_ARG="$CONF_ARG -f docker-compose-with-hub.yml"
+    --backup)
+        CONF_ARG="$CONF_ARG -f docker-compose-backup.yml"
         shift
         ;;
     --help|-h)

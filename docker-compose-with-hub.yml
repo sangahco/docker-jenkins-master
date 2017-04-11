@@ -3,6 +3,14 @@ version: "2"
 services:
   
   jenkins:
+    image: jenkins:alpine
+    extends:
+      file: common-service.yml
+      service: logging
+    ports:
+    - ${JENKINS_REMOTE_API_PORT}:50000
+    volumes: 
+    - ${JENKINS_HOME}:/var/jenkins_home
     networks: 
       default:
       hub_net:
