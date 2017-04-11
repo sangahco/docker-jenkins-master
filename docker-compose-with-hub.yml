@@ -11,11 +11,16 @@ services:
     - ${JENKINS_REMOTE_API_PORT}:50000
     volumes: 
     - ${JENKINS_HOME}:/var/jenkins_home
+    environment:
+    - AWS_ACCESS_KEY_ID
+    - AWS_SECRET_ACCESS_KEY
+    - AWS_S3_PROXY_SSH_KEY
     networks: 
       default:
       hub_net:
         aliases:
         - builder
+    restart: "unless-stopped"
 
 networks: 
   hub_net:
