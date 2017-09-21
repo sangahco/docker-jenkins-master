@@ -2,7 +2,7 @@ version: "2"
 
 services:
   jenkins:
-    image: jenkins:alpine
+    image: jenkins/jenkins:lts-alpine
     extends:
       file: common-service.yml
       service: logging
