@@ -13,6 +13,8 @@ Jenkins Master
     - **JENKINS_HOME**
     - **JENKINS_HTTP_PORT**
     - **JENKINS_REMOTE_API_PORT**
+    - **AWS_S3_PROXY_SSH_KEY**
+      This is the path to the ssh key for the server used has tunnel for our SVN
 
     ### Start with:
 
