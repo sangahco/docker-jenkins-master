@@ -2,7 +2,7 @@ version: "2"
 
 services:
   jenkins:
-    image: ${REGISTRY_URL}/jenkins:0.1-svntunnel
+    image: ${REGISTRY_URL}/${PROJECT_NAME}
     extends:
       file: common-service.yml
       service: logging
